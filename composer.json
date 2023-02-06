@@ -1,0 +1,18 @@
+{
+    "name": "kacper/php-art",
+    "description": "A library for generating simple generative art in PHP",
+    "type": "library",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "KacperGorec\\PhpArt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kacpergorec",
+            "email": "kacpergorec@gmail.com"
+        }
+    ]
+}
