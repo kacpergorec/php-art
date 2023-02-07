@@ -24,6 +24,8 @@ class ArtCanvas
 
     public Palette $palette;
 
+    public int $shapeStroke = 0;
+
     public static function new(int $width = 320, int $height = 240): self
     {
         return new self($width, $height);
@@ -100,6 +102,13 @@ class ArtCanvas
     public function setShapeSizeMultiplier(float $shapeSizeMultiplier): self
     {
         $this->shapeSizeMultiplier = $shapeSizeMultiplier;
+
+        return $this;
+    }
+
+    public function setShapeStroke(int $widthUnits) : self
+    {
+        $this->shapeStroke = $widthUnits;
 
         return $this;
     }

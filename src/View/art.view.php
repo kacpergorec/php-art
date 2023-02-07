@@ -8,6 +8,8 @@ use KacperGorec\PhpArt\ArtCanvas;
 <svg
         width="<?= $canvas->width ?>"
         height="<?= $canvas->height ?>"
+        stroke="<?= $canvas->palette->background  ?>"
+        stroke-width="<?= $canvas->shapeStroke?>"
 >
     <defs>
         <?php foreach ($canvas->defs as $canvas->def): ?>
