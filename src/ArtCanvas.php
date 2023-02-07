@@ -26,6 +26,8 @@ class ArtCanvas
 
     public int $shapeStroke = 0;
 
+    public bool $constrainShapes = false;
+
     public static function new(int $width = 320, int $height = 240): self
     {
         return new self($width, $height);
@@ -109,6 +111,13 @@ class ArtCanvas
     public function setShapeStroke(int $widthUnits) : self
     {
         $this->shapeStroke = $widthUnits;
+
+        return $this;
+    }
+
+    public function constrainShapes() : self
+    {
+        $this->constrainShapes = true;
 
         return $this;
     }

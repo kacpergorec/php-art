@@ -33,9 +33,16 @@ abstract class AbstractShape
         }
 
         return [
-            'x' => random_int($width, $this->canvas->width - $width),
-            'y' => random_int($height, $this->canvas->height - $height)
+            'x' => random_int($width, $this->calculateMaxDimension($this->canvas->width, $width)),
+            'y' => random_int($height, $this->calculateMaxDimension($this->canvas->height, $height))
         ];
+    }
+
+    private function calculateMaxDimension($canvasDimension, $dimension)
+    {
+        $subtractDimension = $this->canvas->constrainShapes ? $dimension : 0;
+
+        return $canvasDimension - $subtractDimension;
     }
 
 }
