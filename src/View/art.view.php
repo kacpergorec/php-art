@@ -1,8 +1,6 @@
 <?php
 /** @var ArtCanvas $canvas */
-
 use KacperGorec\PhpArt\ArtCanvas;
-
 ?>
 
 <svg

@@ -1,7 +1,12 @@
+<?php
+/** @var Rect $rect */
+use KacperGorec\PhpArt\Shape\Rect;
+?>
+
 <rect
-        width="<?= $width ?>"
-        height="<?= $height ?>"
-        style="fill: <?= $canvas->palette->primary ?>;"
-        x="<?= random_int($width, $canvas->width - $width) ?>"
-        y="<?= random_int($height, $canvas->height - $height) ?>"
+        width="<?= $rect->width ?>"
+        height="<?= $rect->height ?>"
+        style="fill: <?= $rect->canvas->palette->primary ?>;"
+        x="<?= $rect->position['x'] ?>"
+        y="<?= $rect->position['y'] ?>"
 />

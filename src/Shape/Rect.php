@@ -8,18 +8,18 @@ use KacperGorec\PhpArt\Renderer;
 class Rect extends AbstractShape
 {
 
-    private int $width;
-    private int $height;
+    public int $width;
+    public int $height;
 
     public function __toString(): string
     {
         $this->width = $this->randomSize();
         $this->height = $this->randomSize();
 
+        $this->position = $this->randomPosition($this->width, $this->height);
+
         return Renderer::view('rect', [
-            'width' => $this->width,
-            'height' => $this->height,
-            'canvas' => $this->canvas
+            'rect' => $this,
         ]);
     }
 }

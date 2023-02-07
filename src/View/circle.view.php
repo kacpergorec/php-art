@@ -1,6 +1,11 @@
+<?php
+/** @var Circle $circle */
+use KacperGorec\PhpArt\Shape\Circle;
+?>
+
 <circle
-        r="<?= $radius ?>"
-        style="fill: <?= $canvas->palette->secondary ?>;"
-        cx="<?= random_int($radius, $canvas->width - $radius) ?>"
-        cy="<?= random_int($radius, $canvas->height - $radius) ?>"
+        r="<?= $circle->radius ?>"
+        style="fill: <?= $circle->canvas->palette->secondary ?>;"
+        cx="<?= $circle->position['x'] ?>"
+        cy="<?= $circle->position['y'] ?>"
 />
